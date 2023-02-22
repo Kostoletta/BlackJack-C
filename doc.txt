@@ -1,0 +1,17 @@
+La funzione per la generazione del mazzo dispone di 3 cicli
+-Il più esterno con indice k itera il numero di mazzi che si
+vogliono aggiugnere al mazzo da utilizzare
+
+-Il secondo con indice i itera il numero di semi (4)
+
+-Il terzo ciclo con indice j, itera di 13 in 13 (numero di carte
+per ogni seme) per ogni seme e per ogni mazzo
+La manipolazioen dell'indice avviene tramite l'operatore modulo
+infatti mazzo ha 312 posizioni quindi il comportamento atteso di j
+è quello di raggiungere tale valore, mentre per "prendere" i 
+dati dagli array di dati j deve essere "modulato" a 13
+for(
+    int j = 13 * i * k;             -> j assume valori multipli di 13 in base a quale iterazione di i e k è
+    j < 13 * ((i + 1) * (k + 1));   -> j < del multiplo appena superiore 
+    j++                             -> incremento
+)
